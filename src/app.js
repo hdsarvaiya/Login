@@ -26,9 +26,10 @@ require('./db/conn'); // Assuming conn.js contains your connection logic
 const Register = require('./model/registers'); // Import the Register model
 
 // Fix the property name mismatch:
-app.get('/', (req, res) => {
+app.get('/index', (req, res) => {
   res.render('index'); // Use the correct filename 'index'
 });
+
  
 app.get('/register', (req, res) => {
   res.render('register'); // Use the correct filename 'register'
@@ -37,7 +38,7 @@ app.get('/register', (req, res) => {
 app.get('/login', (req, res) => {
   res.render('login'); // Use the correct filename 'register'
 });
-app.get('/Home', (req, res) => {
+app.get('/', (req, res) => {
   res.render('Home'); // Use the correct filename 'register'
 });
 
@@ -73,7 +74,7 @@ app.post("/login" , async (req , res) =>{
 
   if(usermail.password === password){
     res.render("Home");
-    
+
   }else{
     res.send("Invalid Email")
   }
@@ -89,4 +90,3 @@ app.post("/login" , async (req , res) =>{
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
-
