@@ -92,3 +92,24 @@ button:hover {
         display: none;
     }
 }
+
+.mobile-message {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 3px;
+    margin: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        display: none;
+    }
+
+    .mobile-message {
+        display: block;
+    }
+}
