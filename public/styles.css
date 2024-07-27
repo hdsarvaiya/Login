@@ -43,6 +43,7 @@ legend {
 
 .form-group {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 15px;
 }
 
@@ -92,7 +93,7 @@ button:hover {
         display: none;
     }
 }
-/* 
+
 .mobile-message {
     display: none;
     text-align: center;
@@ -106,10 +107,29 @@ button:hover {
 
 @media (max-width: 768px) {
     .container {
-        display: none;
+        width: 95%;
+        padding: 10px;
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+
+    .form-group label {
+        flex: unset;
+        margin-bottom: 5px;
+    }
+
+    .form-group input {
+        flex: unset;
+        width: 100%;
+    }
+
+    button {
+        width: 50%;
     }
 
     .mobile-message {
         display: block;
     }
-} */
+}
